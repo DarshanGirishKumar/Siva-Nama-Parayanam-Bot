@@ -74,12 +74,18 @@ def send_whatsapp_message(message):
         "body": message
     }
 
+    print(f"🔹 Sending Message: {message}")  # Debugging
+
     response = requests.post(url, json=payload)
-    
+
+    print(f"🔹 Response Status Code: {response.status_code}")  # Debugging
+    print(f"🔹 Response Content: {response.text}")  # Debugging
+
     if response.status_code == 200:
         print(f"✅ Message sent: {message}")
     else:
         print(f"❌ Error sending message: {response.text}")
+
 
 def send_night_summary():
     """Fetch the latest 'Siva Nama Parayanam' message, calculate total count, and send a summary message."""
