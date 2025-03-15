@@ -104,7 +104,7 @@ def send_night_summary():
     send_whatsapp_message(summary_message)
 
 # Schedule the script to run every day at a specific time
-schedule.every().day.at("12:57").do(send_night_summary)  # Adjust time as needed
+schedule.every().day.at("14:17").do(send_night_summary)  # Adjust time as needed
 
 # Keep the script running
 print("🚀 Night Summary Bot Running...")
