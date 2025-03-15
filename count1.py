@@ -1,8 +1,6 @@
 import requests
 import re
 import datetime
-import schedule
-import time
 import json
 
 # 🔹 Replace with your Ultramsg API details
@@ -60,7 +58,6 @@ def get_latest_siva_nama_message():
     print(f"⚠️ No valid 'Siva Nama Parayanam' message found for today ({today_date}).")
     return None
 
-
 def extract_count_from_message(message):
     """Extract and sum up the counts from the latest message."""
     lines = message.split("\n")[1:]  # Skip the first line (title & date)
@@ -102,12 +99,6 @@ def send_night_summary():
     summary_message = f"{today}'s count\n{daily_total}\nTotal {overall_total}"
 
     send_whatsapp_message(summary_message)
-#trigger
-send_night_summary()  # Directly call the function
 
-
-# Keep the script running
-print("🚀 Night Summary Bot Running...")
-while True:
-    schedule.run_pending()
-    time.sleep(10)
+# 🚀 Run immediately when script starts
+send_night_summary()
