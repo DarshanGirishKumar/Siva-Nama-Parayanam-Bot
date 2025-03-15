@@ -2,7 +2,7 @@ name: Daily WhatsApp Bot
 
 on:
   schedule:
-    - cron: '17 15 * * *'  # Runs daily at 19:09 UTC (Adjust as needed)
+    - cron: '17 13 * * *'  # Runs daily at 19:09 UTC (Adjust as needed)
   workflow_dispatch:  # Allows manual run
 
 jobs:
