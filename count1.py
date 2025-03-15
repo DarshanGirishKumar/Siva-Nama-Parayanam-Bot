@@ -6,7 +6,7 @@ import json
 # 🔹 Replace with your Ultramsg API details
 ULTRAMSG_INSTANCE_ID = "instance110229"
 ULTRAMSG_TOKEN = "k2cfk51fp28tuup8"
-GROUP_ID = "120363393806699556@g.us"  # Your WhatsApp Group ID
+GROUP_ID = "120363154152626400@g.us"  # Your WhatsApp Group ID
 
 # File to store overall total count
 TOTAL_COUNT_FILE = "total_count.json"
