@@ -102,9 +102,9 @@ def send_night_summary():
     summary_message = f"{today}'s count\n{daily_total}\nTotal {overall_total}"
 
     send_whatsapp_message(summary_message)
+#trigger
+send_night_summary()  # Directly call the function
 
-# Schedule the script to run every day at a specific time
-schedule.every().day.at("14:17").do(send_night_summary)  # Adjust time as needed
 
 # Keep the script running
 print("🚀 Night Summary Bot Running...")
